@@ -15,3 +15,4 @@ $('a[href^="#"]').click(function() {
     var position = target.offset().top - headerHeight;
     $('body,html').stop().animate({scrollTop:position}, 500);
 });
+

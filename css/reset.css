@@ -1,6 +1,7 @@
 /* ------------------------------------------------------------
 style reset
 ------------------------------------------------------------ */
+/* line 6, ../sass/reset.scss */
 html,
 body,
 div,
@@ -90,6 +91,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
+/* line 95, ../sass/reset.scss */
 article,
 aside,
 details,
@@ -104,10 +106,12 @@ section {
   display: block;
 }
 
+/* line 109, ../sass/reset.scss */
 img {
   vertical-align: top;
 }
 
+/* line 113, ../sass/reset.scss */
 h1,
 h2,
 h3,
@@ -118,20 +122,24 @@ h6 {
   font-weight: normal;
 }
 
+/* line 123, ../sass/reset.scss */
 li {
   list-style-type: none;
 }
 
+/* line 127, ../sass/reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* line 132, ../sass/reset.scss */
 blockquote,
 q {
   quotes: none;
 }
 
+/* line 137, ../sass/reset.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -139,4 +147,3 @@ q:after {
   content: "";
   content: none;
 }
-/*# sourceMappingURL=reset.css.map */
