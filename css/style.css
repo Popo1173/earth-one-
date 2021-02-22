@@ -1,0 +1,451 @@
+@charset "UTF-8";
+/* ------------------------------------------------------------
+初期設定
+------------------------------------------------------------ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+@media print, screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* ------------------------------------------------------------
+印刷設定
+------------------------------------------------------------ */
+@media print {
+  body {
+    zoom: 100%;
+    overflow-y: visible;
+    overflow-x: visible;
+  }
+  #pagetop {
+    display: none;
+  }
+}
+
+@page {
+  margin: 30px;
+}
+
+.pbb {
+  page-break-before: always;
+}
+
+/* ------------------------------------------------------------
+レイアウト
+------------------------------------------------------------ */
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb60 {
+  margin-bottom: 60px;
+}
+
+.mb90 {
+  margin-bottom: 90px;
+}
+
+.taRight {
+  text-align: right !important;
+}
+
+.taLeft {
+  text-align: left !important;
+}
+
+.taCenter {
+  text-align: center !important;
+}
+
+/* ------------------------------------------------------------
+表示有無設定 - ブラウザサイズ
+------------------------------------------------------------ */
+@media only screen and (min-width: 992px) {
+  .min992 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .max991 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .min768 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .max767 {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------
+Font Family
+------------------------------------------------------------ */
+body {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Sans", メイリオ, Meiryo, sans-serif;
+}
+
+.ffm {
+  font-family: 游明朝, "Yu Mincho", "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+}
+
+/* ------------------------------------------------------------
+リンク設定
+------------------------------------------------------------ */
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover img {
+  opacity: 0.6;
+}
+
+/* ------------------------------------------------------------
+header
+------------------------------------------------------------ */
+header .logo a:hover img {
+  opacity: 1;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+header .headerWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  background: #ffffff;
+  border-bottom: 1px solid #000133;
+}
+
+header .headerWrap .logo img {
+  width: 115px;
+}
+
+@media print, screen and (min-width: 768px) {
+  header .headerWrap {
+    padding: 30px;
+  }
+  header .headerWrap .logo img {
+    width: 150px;
+  }
+}
+
+/* ------------------------------------------------------------
+footer
+------------------------------------------------------------ */
+footer .footerWrap {
+  padding: 30px 15px 18px;
+  background: #000133;
+}
+
+footer .footerWrap .footerLogo {
+  width: 145px;
+  margin: 0 auto;
+}
+
+footer .footerWrap .footerLinkList {
+  text-align: center;
+  margin-top: 28px;
+}
+
+footer .footerWrap .footerLinkList a {
+  font-size: 12px;
+  color: #ffffff;
+  margin: 0 5px;
+}
+
+footer .footerWrap small {
+  display: block;
+  font-size: 10px;
+  color: #A1A1B3;
+  text-align: center;
+  padding-top: 26px;
+}
+
+@media print, screen and (min-width: 768px) {
+  footer .footerWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 44px 15px;
+    background: #000133;
+  }
+  footer .footerWrap .footerLogo {
+    width: 145px;
+  }
+  footer .footerWrap .footerLinkList {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: left;
+    margin-top: 0;
+    padding-left: 40px;
+  }
+  footer .footerWrap .footerLinkList a {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0 5px;
+  }
+  footer .footerWrap small {
+    width: 100%;
+  }
+}
+
+@media print, screen and (min-width: 992px) {
+  footer .footerWrap .footerLinkList {
+    width: calc(75% - 145px);
+  }
+  footer .footerWrap small {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 13px;
+    text-align: right;
+    padding-top: 0;
+  }
+}
+
+/* ------------------------------------------------------------
+Nav
+------------------------------------------------------------ */
+@media only screen and (max-width: 767px) {
+  #navToggle {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    height: 16px;
+    cursor: pointer;
+  }
+  #navToggle > div {
+    position: relative;
+    width: 25px;
+  }
+  #navToggle span {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    display: block;
+    background: #333;
+    position: absolute;
+  }
+  #navToggle span:nth-child(1) {
+    top: 0px;
+  }
+  #navToggle span:nth-child(2) {
+    top: 8px;
+  }
+  #navToggle span:nth-child(3) {
+    top: 16px;
+  }
+  .open #navToggle span {
+    background: #fff;
+  }
+  .open #navToggle span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .open #navToggle span:nth-child(2) {
+    top: 10px;
+    width: 0;
+    left: 50%;
+  }
+  .open #navToggle span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  /* z-index */
+  #navToggle {
+    z-index: 1000;
+  }
+  #container {
+    z-index: 900;
+  }
+  #glovalNav {
+    background: #000133;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 29px;
+    opacity: 0;
+    -webkit-transition: opacity .6s ease, visibility .6s ease;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+  #glovalNav a {
+    display: block;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    -webkit-transition: color .6s ease;
+    transition: color .6s ease;
+  }
+  #glovalNav a:hover {
+    color: #666;
+  }
+  #glovalNav ul {
+    list-style: none;
+  }
+  #glovalNav ul li {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    -webkit-transition: opacity .2s ease, -webkit-transform .6s ease;
+    transition: opacity .2s ease, -webkit-transform .6s ease;
+    transition: transform .6s ease, opacity .2s ease;
+    transition: transform .6s ease, opacity .2s ease, -webkit-transform .6s ease;
+  }
+  #glovalNav ul li:nth-child(2) {
+    -webkit-transition-delay: .15s;
+            transition-delay: .15s;
+  }
+  #glovalNav ul li:nth-child(3) {
+    -webkit-transition-delay: .3s;
+            transition-delay: .3s;
+  }
+  #glovalNav ul li:nth-child(4) {
+    -webkit-transition-delay: .45s;
+            transition-delay: .45s;
+  }
+  #glovalNav ul li:nth-child(5) {
+    -webkit-transition-delay: .6s;
+            transition-delay: .6s;
+  }
+  #glovalNav ul li:nth-child(6) {
+    -webkit-transition-delay: .75s;
+            transition-delay: .75s;
+  }
+  #glovalNav ul li:nth-child(7) {
+    -webkit-transition-delay: .9s;
+            transition-delay: .9s;
+  }
+  /* open */
+  .open {
+    overflow: hidden;
+  }
+  .open #glovalNav {
+    visibility: visible;
+    opacity: 1;
+  }
+  .open #glovalNav .naviLogo {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .open #glovalNav .naviLogo img {
+    width: 115px;
+  }
+  .open #glovalNav li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: opacity .9s ease, -webkit-transform 1s ease;
+    transition: opacity .9s ease, -webkit-transform 1s ease;
+    transition: transform 1s ease, opacity .9s ease;
+    transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  #glovalNav .naviLogo {
+    display: none;
+  }
+  #glovalNav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #glovalNav ul li {
+    padding-left: 20px;
+  }
+  #glovalNav ul li a {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

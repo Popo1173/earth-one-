@@ -1,0 +1,1144 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------
+Main Img
+------------------------------------------------------------ */
+.mainImgWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 276px;
+  margin-bottom: 20px;
+  padding-top: 56px;
+  background: url(../images/index/main-img.jpg) no-repeat center center / cover;
+
+  .mainImgTxt {
+    font-size: 33px;
+    color: #ffffff;
+    line-height: 1.2;
+    width: 100%;
+    padding: 0 0 0 20px;
+
+    .mainImgSubTxt {
+      font-size: 12px;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+  }
+
+  a {
+    display: none;
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    height: 681px;
+    margin-bottom: 40px;
+    padding-top: 94px;
+
+    .mainImgTxt {
+      font-size: 80px;
+      padding: 0 0 0 60px;
+
+      .mainImgSubTxt {
+        font-size: 18px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      position: absolute;
+      right: 40px;
+      bottom: 0;
+      z-index: 2;
+      padding: 10px 10px 110px;
+      overflow: hidden;
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Josefin Sans', sans-serif;
+      line-height: 1;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      height: 100px;
+      background: #fff;
+    }
+
+    a::after {
+      animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+    }
+
+    @keyframes sdl {
+      0% {
+        transform: scale(1, 0);
+        transform-origin: 0 0;
+      }
+
+      50% {
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+      }
+
+      50.1% {
+        transform: scale(1, 1);
+        transform-origin: 0 100%;
+      }
+
+      100% {
+        transform: scale(1, 0);
+        transform-origin: 0 100%;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------
+Contents
+------------------------------------------------------------ */
+//common
+.contTitle1 {
+  font-size: 24px;
+  color: #000266;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media print,
+  screen and (min-width: 768px) {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+.contTitle2 {
+  font-size: 18px;
+  color: #000266;
+  text-align: center;
+  margin-bottom: 15px;
+
+  @media print,
+  screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+}
+
+.contTitle3 {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+
+  @media print,
+  screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+}
+
+// Link Btn
+.linkBtn1 {
+  text-align: center;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #ffffff;
+    width: 255px;
+    padding: 15px 0;
+    background: #297ACC;
+
+    img {
+      width: 25px;
+      height: 5px;
+      margin-left: 15px;
+    }
+
+    &:hover {
+      opacity: .8;
+
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 1100px) {
+    text-align: left;
+
+    a {
+      font-size: 18px;
+      width: 300px;
+      padding: 15px 0;
+    }
+  }
+}
+
+.linkBtn2 {
+  text-align: center;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #000000;
+    width: 255px;
+    padding: 15px 0;
+    background: #ffffff;
+    border: 1px solid #297ACC;
+
+    img {
+      width: 25px;
+      height: 5px;
+      margin-left: 15px;
+    }
+
+    &:hover {
+      opacity: .8;
+
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 1100px) {
+    text-align: left;
+
+    a {
+      font-size: 18px;
+      width: 300px;
+      padding: 15px 0;
+    }
+  }
+}
+
+// feed
+.movetext {
+  opacity: 0;
+}
+
+.movetext span {
+  opacity: 0;
+}
+
+
+// vision
+.visionWrap {
+  position: relative;
+  height: 462px;
+  margin: 20px;
+  background: url(../images/index/vision-bg.jpg) no-repeat center center / cover;
+
+  .visionBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 462px;
+    background: rgba(0, 1, 52, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .visionTxt {
+      font-size: 24px;
+      color: #ffffff;
+      text-align: center;
+
+      .visionSubTxt {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    height: 600px;
+    margin: 40px;
+
+    .visionBox {
+      height: 600px;
+      padding: 15px 60px;
+      justify-content: flex-start;
+
+      .visionTxt {
+        font-size: 50px;
+        text-align: left;
+
+        .visionSubTxt {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 1280px) {
+    width: 1200px;
+    margin: 40px auto;
+  }
+}
+
+// Values
+.valuesBox {
+  width: 100%;
+  padding: 37px auto 58px;
+  padding: 20px;
+
+  dl {
+    dt {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    dd {
+      font-size: 13px;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .last {
+      padding-bottom: 0;
+    }
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    margin: 85px auto 107px;
+
+    dl {
+      dt {
+        font-size: 50px;
+      }
+
+      dd {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 1230px) {
+    width: 1200px;
+  }
+}
+
+// Member
+.memberWrap {
+  padding: 40px 0;
+  background: #F7F7F7;
+
+  .memberTxt {
+    font-size: 12px;
+    margin: 0 20px 50px;
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    padding: 80px 0;
+    background: #F7F7F7;
+
+    .memberTxt {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  // Carousel
+  .slickBox {
+    position: relative;
+
+    .slickMember {
+      padding: 0 35px;
+
+      .memberBox {
+        a {
+          display: block;
+          margin: 15px;
+          box-shadow: 0px 0px 8px 3px #ccc;
+
+          &:hover {
+            img {
+              opacity: 1;
+            }
+          }
+        }
+
+        .box {
+          min-height: 540px;
+          background: #ffffff;
+
+          .txtBox {
+            padding: 25px 20px;
+
+            .name {
+              font-size: 18px;
+
+              span {
+                font-size: 12px;
+                margin-left: 15px;
+              }
+            }
+
+            .line {
+              width: 35px;
+              margin: 15px 0;
+              border-bottom: 1px solid #CCCCCC;
+            }
+
+            .txt {
+              font-size: 12px;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+    }
+
+    .memberPrev,
+    .memberNext {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 40px;
+      margin: auto;
+
+      img {
+        width: 40px;
+      }
+    }
+
+    .memberPrev {
+      left: 0;
+
+      img {
+        padding: 0 0 0 15px;
+      }
+    }
+
+    .memberNext {
+      right: 0;
+
+      img {
+        padding: 0 15px 0 0;
+      }
+    }
+
+    @media print,
+    screen and (min-width: 768px) {
+      margin: 0 auto;
+
+      .slickMember {
+        padding: 0 60px;
+
+        .memberBox {
+          padding: 0 5px;
+
+          a {
+            transition: 0.3s ease-in-out;
+            box-shadow: none;
+
+            &:hover {
+              box-shadow: 0px 0px 8px 3px #ccc;
+            }
+          }
+
+          .box {
+            min-height: 620px;
+
+            .txtBox {
+              .name {
+                font-size: 22px;
+
+                span {
+                  font-size: 16px;
+                }
+              }
+
+              .line {
+                width: 40px;
+              }
+
+              .txt {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .memberPrev,
+      .memberNext {
+        img {
+          width: 60px;
+        }
+      }
+    }
+
+    @media print,
+    screen and (min-width: 1070px) {
+      width: 1040px;
+
+      .slickMember {
+        padding: 0 70px;
+
+        .memberBox {
+          padding: 0 40px;
+
+          .box {
+            min-height: 600px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Service
+.serviceWrap {
+  padding: 45px 0 0;
+
+  .serviceTxt {
+    font-size: 12px;
+    margin: 0 20px 31px;
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    padding: 50px 0;
+
+    .serviceTxt {
+      font-size: 18px;
+      text-align: center;
+      margin: 0 20px 54px;
+    }
+  }
+
+  .serviceBox {
+    width: 100%;
+    padding: 0 20px 0 40px;
+
+    .serviceList {
+      padding-bottom: 30px;
+      border-bottom: 1px solid #B3B3B3;
+
+      .box {
+        display: flex;
+        width: 100%;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .img {
+          width: 45%;
+          padding-right: 15px;
+          text-align: center;
+        }
+
+        ul {
+          width: calc(55% - 2em);
+          margin-left: 2em;
+
+          li {
+            font-size: 11px;
+            list-style-type: disc;
+          }
+        }
+      }
+    }
+
+    @media print,
+    screen and (min-width: 768px) {
+      .serviceList {
+        display: flex;
+        padding-bottom: 60px;
+
+        .box {
+          display: block;
+          width: 33.33%;
+          margin-bottom: 0;
+
+          .img {
+            width: 100%;
+            margin-bottom: 44px;
+            padding: 0;
+          }
+
+          ul {
+            width: calc(100% - 2em);
+
+            li {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .box:nth-child(1) {
+          margin-right: 60px;
+        }
+
+        .box:nth-child(2) {
+          margin: 0 60px;
+        }
+
+        .box:nth-child(3) {
+          margin-left: 60px;
+        }
+      }
+    }
+
+    @media print,
+    screen and (min-width: 1070px) {
+      width: 1040px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+}
+
+// Products
+.productsWrap {
+  padding: 45px 0;
+
+  .productsTxt {
+    font-size: 12px;
+    margin: 0 20px 31px;
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    padding: 50px 0;
+
+    .productsTxt {
+      font-size: 18px;
+      text-align: center;
+      margin: 0 20px 54px;
+    }
+  }
+
+  .productsBox {
+    margin-bottom: 30px;
+
+    .box {
+      width: 100%;
+      padding: 0 40px 31px;
+
+      .title {
+        font-size: 11px;
+        color: #808080;
+        margin-top: 15px;
+
+        span {
+          display: block;
+          font-size: 16px;
+          color: #000000;
+        }
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    .line {
+      width: 30px;
+      margin: 10px 0 15px;
+      border-bottom: 1px solid #CCCCCC;
+    }
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    .productsBox {
+      display: flex;
+
+      .box {
+        width: calc(50% - 30px);
+        margin: 0 15px;
+        padding: 0;
+
+        .title {
+          font-size: 18px;
+          line-height: 1.4;
+          margin-top: 25px;
+          min-height: 95px;
+
+          span {
+            font-size: 22px;
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .line {
+        width: 40px;
+        margin: 20px 0 25px;
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 1100px) {
+    width: 1040px;
+    margin: 0 auto;
+
+    .productsBox {
+      margin: 0 -15px 30px;
+    }
+  }
+}
+
+// Company
+.companyWrap {
+  padding: 40px 0;
+
+  @media print,
+  screen and (min-width: 768px) {
+    padding: 50px 0;
+  }
+
+  .companyBox {
+    padding: 0 20px;
+
+    .box {
+      table {
+        margin-bottom: 30px;
+
+        th,
+        td {
+          font-size: 12px;
+          font-weight: normal;
+          text-align: left;
+          padding: 4px 0;
+        }
+
+        th {
+          width: 75px;
+        }
+      }
+
+      .title {
+        font-size: 16px;
+      }
+
+      .line {
+        width: 60px;
+        margin: 13px 0;
+        border-bottom: 1px solid #CCCCCC;
+      }
+
+      ul {
+        width: calc(100% - 2em);
+        margin: 0 0 30px 2em;
+
+        li {
+          font-size: 12px;
+          list-style: disc;
+        }
+      }
+
+      .imgBox {
+        font-size: 18px;
+        margin-bottom: 33px;
+
+        .imgName {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    @media print,
+    screen and (min-width: 768px) {
+      display: flex;
+
+      .box {
+        table {
+          margin-bottom: 53px;
+
+          th,
+          td {
+            font-size: 16px;
+          }
+
+          th {
+            width: 100px;
+          }
+        }
+
+        .title {
+          font-size: 22px;
+        }
+
+        .line {
+          width: 60px;
+          margin: 20px 0 24px;
+        }
+
+        ul {
+          li {
+            font-size: 16px;
+          }
+        }
+
+        &:first-child {
+          order: 2;
+          flex: 1;
+        }
+
+        &:last-child {
+          order: 1;
+          width: 45%;
+          margin-right: 30px;
+
+          .imgBox {
+            font-size: 18px;
+            margin-bottom: 38px;
+
+            .imgName {
+              margin-bottom: 8px;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    @media print,
+    screen and (min-width: 1100px) {
+      width: 1040px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+}
+
+// Group
+.groupWrap {
+  padding: 40px 20px 0;
+
+  .title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    .title {
+      font-size: 22px;
+    }
+  }
+
+  .groupBox {
+    padding: 30px;
+    border: 1px solid #CCCCCC;
+
+    .box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .groupLogo {
+        width: 35%;
+      }
+
+      table {
+        width: 65%;
+        margin-left: 20px;
+
+        th,
+        td {
+          font-size: 11px;
+          font-weight: normal;
+          text-align: left;
+        }
+
+        th {
+          width: 50px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    .groupBox {
+      display: flex;
+      padding: 50px 20px;
+
+      .box {
+        width: calc(50% - 30px);
+        margin: 0 15px;
+
+        .groupLogo {
+          width: 30%;
+        }
+
+        table {
+          width: 70%;
+
+          th,
+          td {
+            font-size: 15px;
+          }
+
+          th {
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 1100px) {
+    width: 1040px;
+    margin: 0 auto;
+    padding: 0;
+
+    .groupBox {
+      padding: 50px 70px;
+    }
+  }
+}
+
+// Recruit
+.recruitWrap {
+  margin: 0 20px;
+  padding: 35px 20px 40px;
+  background: url(../images/index/recruit-bg.jpg) no-repeat center center / cover;
+
+  @media print,
+  screen and (min-width: 768px) {
+    margin: 0 40px;
+    padding: 75px 60px 80px;
+  }
+
+  .recruitBox {
+    color: #ffffff;
+
+    .box {
+      p {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      table {
+        margin: 50px 0 30px;
+
+        th,
+        td {
+          font-size: 12px;
+          font-weight: normal;
+          text-align: left;
+          padding: 2px 0;
+        }
+
+        th {
+          width: 72px;
+        }
+      }
+    }
+
+    @media print,
+    screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      margin: 0 -20px;
+
+      .box {
+        width: calc(50% - 40px);
+        margin: 0 20px;
+
+        p {
+          font-size: 25px;
+        }
+
+        table {
+
+          th,
+          td {
+            font-size: 18px;
+          }
+
+          th {
+            width: 105px;
+          }
+        }
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 1280px) {
+    width: 1200px;
+    margin: 40px auto 0;
+  }
+}
+
+// News Blog
+.newsWrap {
+  position: relative;
+  padding: 35px 35px 40px;
+
+  @media print,
+  screen and (min-width: 768px) {
+    padding: 75px 0 80px;
+  }
+
+  .slickNews {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+
+    .slickBox {
+      width: calc(100 / 3);
+      margin: 0 0 10px;
+
+      a {
+        display: block;
+        margin: 15px;
+        box-shadow: 0px 0px 8px 3px #ccc;
+
+        &:hover {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+
+      .box {
+        background: #ffffff;
+
+        .txtBox {
+          padding: 15px;
+
+          .txt {
+            font-size: 12px;
+            margin-bottom: 40px;
+          }
+
+          .flexBox {
+            display: flex;
+            align-items: center;
+
+            .date,
+            .arrow {
+              width: 50%;
+            }
+
+            .date {
+              font-size: 12px;
+            }
+
+            .arrow {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+
+              img {
+                width: 25px;
+                height: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slickPrev,
+  .slickNext {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 40px;
+    margin: auto;
+
+    img {
+      width: 40px;
+    }
+  }
+
+  .slickPrev {
+    left: 0;
+
+    img {
+      padding: 0 0 0 15px;
+    }
+  }
+
+  .slickNext {
+    right: 0;
+
+    img {
+      padding: 0 15px 0 0;
+    }
+  }
+
+  @media print,
+  screen and (min-width: 768px) {
+    .slickNews {
+      .slickBox {
+        width: calc((100% / 3) - 10px);
+        margin: 0 5px;
+
+        a {
+          margin: 15px;
+          box-shadow: none;
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            box-shadow: 0px 0px 8px 3px #ccc;
+          }
+        }
+
+        .box {
+          .txtBox {
+            padding: 25px 20px 10px;
+
+            .txt {
+              font-size: 15px;
+              margin-bottom: 48px;
+            }
+
+            .flexBox {
+              .date {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media print,
+  screen and (min-width: 1100px) {
+    width: 1040px;
+    margin: 0 auto;
+    padding: 75px 0;
+  }
+}
